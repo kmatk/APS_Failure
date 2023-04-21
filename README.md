@@ -44,9 +44,9 @@ In order to accomplish this we can created two functions. We can use these later
 
 In order to prepare this data, we identified the quantity and location of null values.
 
-![Nulls in Rows](./images/nulls_in_rows.png)
+![Nulls in Rows](./images/nulls_in_rows.jpeg)
 
-![Nulls in Columns](./images/nulls_in_cols.png)
+![Nulls in Columns](./images/nulls_in_cols.jpeg)
 
 It's clear that most of our columns have little to no nulls. However, there are many rows with large amounts of null values. We could drastically reduce our null counts by dropping these rows. In practice, this won't make much sense. Each sample is data pulled from a vehicle undergoing maintenance. It's important that we can actually model the data drawn from any vehicle that enters our shop. In the case of a vehicle whose APS sensors are outputting many null values, you might say we can just inspect their APS by default. This, however, is incorrect, as the pool of rows with many null values is much larger than the pool of our positive class. As a result, we most determine a method for modeling samples with many null values. To solve this problem we'll utilize a KNNImputer, or K-Nearest Neighbors Imputer. This imputer will fill in null values based on their proximity to other values in n-dimensional space.
 
