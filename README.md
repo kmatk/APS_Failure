@@ -56,6 +56,6 @@ Finally, we'll scale our data in order to obtain more uniform results across mod
 Because we know the costs associated with out errors, we were able to create custom cost metrics in order to determine the efficacy of our models. We used this cost function, combined with the models recall score to determine the quality of our models. We then went through an iterative modeling process, using Logistic Regressions, Decision Trees, Random Forests, Grid Searches, as well as using XGBoostClassifier and XGBRFClassifier. 
 
 ## Evaluation
-In the end, it turned out that a Logistic Regression Model had the best metrics on unseen data.  
+In the end, it turned out that a Logistic Regression Model had the best metrics on unseen data. We achieved a custom loss score of $14,400. With further model development we can likely bring that cost to under $10,000.
 
 ![Model Outcomes](./images/results.png)
